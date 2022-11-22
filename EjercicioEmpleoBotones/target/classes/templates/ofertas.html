@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+</head>
+<body>
+
+
+	<div class="container mt-5">
+		<div class="mx-auto" style="width: 60%;">
+			<h2 class="mb-3" th:text="${titulo}"></h2>
+			<h5>Id de oferta:
+				<span class="text-primary" th:text="${mostrarOferta.id}">Id de oferta: </span>
+			</h5>
+			<h5>Descripción:
+				<span class="text-primary" th:text="${mostrarOferta.descripcion}"></span>
+			</h5>
+			<h5>Experiencia mínima:
+				<span class="text-primary" th:text="${mostrarOferta.experiencia}"></span>
+			</h5>
+			<h5>Lugar de trabajo:
+				<span class="text-primary" th:text="${mostrarOferta.lugar}"></span>
+			</h5>
+			<h5>Fecha:
+				<span class="text-primary" th:text="${#dates.format(mostrarOferta.fechaAlta, 'dd/MM/yyyy')}"></span>
+			</h5>
+			
+			<a name="volver" type="submit" value="verTodos" class="btn btn-outline-dark mt-4" th:href="@{/index}">Volver</a>
+					
+		</div>
+	</div>
+
+
+
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+		crossorigin="anonymous"></script>
+</body>
+</html>
